@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="img/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Jquary -->
+    <script type="text/javascript">
+    var i;
+    var rand;
+    var Genre;
+    var HENcss;
+
+    function TriB(){
+
+        /** 疑似クラス用のCSSコード */
+        // スタート！！
+          
+        // ------------------------------------差分
+        switch(sabun) {
+          case 'アルファベットひらがなカタカナ数字':
+            rand = Math.floor(Math.random() * 4);
+            HENcss = '数字';
+            if (rand < 3) HENcss = 'アルファベット';
+            if (rand < 2) HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'ひらがなカタカナ数字':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = '数字';
+            if (rand < 2) HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'アルファベットひらがな数字':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = '数字';
+            if (rand < 2) HENcss = 'アルファベット';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'アルファベットカタカナ数字':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = '数字';
+            if (rand < 2) HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'アルファベット';
+          break;
+
+          case 'ひらがな数字':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = '数字';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'カタカナ数字':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = '数字';
+            if (rand < 1) HENcss = 'カタカナ';
+          break;
+        
+          case 'アルファベット数字':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = '数字';
+            if (rand < 1) HENcss = 'アルファベット';
+          break;
+        
+          case '数字':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = '数字';
+          break;
+        
+
+          case 'アルファベットひらがなカタカナ':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = 'アルファベット';
+            if (rand < 2) HENcss = 'ひらがな';
+            if (rand < 1) HENcss = 'カタカナ';
+          break;
+        
+          case 'アルファベットひらがな':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = 'アルファベット';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+
+          case 'アルファベットカタカナ':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = 'アルファベット';
+            if (rand < 1) HENcss = 'カタカナ';
+          break;
+        
+          case 'アルファベット':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = 'アルファベット';
+          break;
+        
+        
+          case 'ひらがなカタカナ':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'カタカナ':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = 'カタカナ';
+          break;
+        
+          case 'ひらがな':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = 'ひらがな';
+          break;
+        }
+        // ------------------------------------Fin 差分
+        
+        switch(HENcss){
+          case '数字':
+            rand = Math.floor(Math.random() * 10);
+            // 数字
+        HENcss = `.I:after{content:'9';}`;
+        if (rand < 9) HENcss = `.I:after{content:'8';}`;
+	      if (rand < 8) HENcss = `.I:after{content:'7';}`;
+        if (rand < 7) HENcss = `.I:after{content:'6';}`;
+        if (rand < 6) HENcss = `.I:after{content:'5';}`;
+        if (rand < 5) HENcss = `.I:after{content:'4';}`;
+	      if (rand < 4) HENcss = `.I:after{content:'3';}`;
+        if (rand < 3) HENcss = `.I:after{content:'2';}`;
+        if (rand < 2) HENcss = `.I:after{content:'1';}`;
+        if (rand < 1) HENcss = `.I:after{content:'0';}`;
+        // Fin 数字
+        break;
+
+        case 'アルファベット':
+        rand = Math.floor(Math.random() * 27);
+        // アルファベット
+        HENcss = `.I:after{content:'Z';}`;
+	      if (rand < 26) HENcss = `.I:after{content:'Y';}`;
+        if (rand < 24) HENcss = `.I:after{content:'X';}`;
+        if (rand < 23) HENcss = `.I:after{content:'W';}`;
+        if (rand < 22) HENcss = `.I:after{content:'V';}`;
+	      if (rand < 21) HENcss = `.I:after{content:'U';}`;
+        if (rand < 20) HENcss = `.I:after{content:'T';}`;
+        if (rand < 19) HENcss = `.I:after{content:'S';}`;
+        if (rand < 18) HENcss = `.I:after{content:'R';}`;
+	      if (rand < 17) HENcss = `.I:after{content:'Q';}`;
+        if (rand < 16) HENcss = `.I:after{content:'P';}`;
+        if (rand < 15) HENcss = `.I:after{content:'O';}`;
+        if (rand < 14) HENcss = `.I:after{content:'L';}`;
+	      if (rand < 13) HENcss = `.I:after{content:'N';}`;
+        if (rand < 12) HENcss = `.I:after{content:'M';}`;
+        if (rand < 11) HENcss = `.I:after{content:'K';}`;
+        if (rand < 10) HENcss = `.I:after{content:'J';}`;
+	      if (rand < 9) HENcss = `.I:after{content:'I';}`;
+        if (rand < 8) HENcss = `.I:after{content:'H';}`;
+        if (rand < 7) HENcss = `.I:after{content:'G';}`;
+        if (rand < 6) HENcss = `.I:after{content:'F';}`;
+	      if (rand < 5) HENcss = `.I:after{content:'E';}`;
+        if (rand < 4) HENcss = `.I:after{content:'D';}`;
+        if (rand < 3) HENcss = `.I:after{content:'C';}`;
+        if (rand < 2) HENcss = `.I:after{content:'B';}`;
+        if (rand < 1) HENcss = `.I:after{content:'A';}`;
+        //Fin アルファベット
+        break;
+
+        case 'カタカナ':
+        rand = Math.floor(Math.random() * 74);
+        //全カタカナ
+        HENcss = `.I:after{content:'ョ';}`;
+        if (rand < 73) HENcss = `.I:after{content:'ュ';}`;
+        if (rand < 72) HENcss = `.I:after{content:'ャ';}`;
+        
+        if (rand < 71) HENcss = `.I:after{content:'パ';}`;
+        if (rand < 70) HENcss = `.I:after{content:'ピ';}`;
+	      if (rand < 69) HENcss = `.I:after{content:'プ';}`;
+        if (rand < 68) HENcss = `.I:after{content:'ペ';}`;
+        if (rand < 67) HENcss = `.I:after{content:'ポ';}`;
+        
+        if (rand < 66) HENcss = `.I:after{content:'ガ';}`;
+	      if (rand < 65) HENcss = `.I:after{content:'ギ';}`;
+        if (rand < 64) HENcss = `.I:after{content:'グ';}`;
+	      if (rand < 63) HENcss = `.I:after{content:'ゲ';}`;
+        if (rand < 62) HENcss = `.I:after{content:'ゴ';}`;
+        if (rand < 61) HENcss = `.I:after{content:'ザ';}`;
+        if (rand < 60) HENcss = `.I:after{content:'ジ';}`;
+	      if (rand < 59) HENcss = `.I:after{content:'ズ';}`;
+        if (rand < 58) HENcss = `.I:after{content:'ゼ';}`;
+	      if (rand < 57) HENcss = `.I:after{content:'ゾ';}`;
+        if (rand < 56) HENcss = `.I:after{content:'ダ';}`;
+        if (rand < 55) HENcss = `.I:after{content:'ヂ';}`;
+        if (rand < 54) HENcss = `.I:after{content:'ヅ';}`;
+	      if (rand < 53) HENcss = `.I:after{content:'デ';}`;
+        if (rand < 52) HENcss = `.I:after{content:'ド';}`;
+	      if (rand < 51) HENcss = `.I:after{content:'バ';}`;
+        if (rand < 50) HENcss = `.I:after{content:'ビ';}`;
+        if (rand < 49) HENcss = `.I:after{content:'ブ';}`;
+        if (rand < 48) HENcss = `.I:after{content:'ベ';}`;
+        if (rand < 47) HENcss = `.I:after{content:'ボ';}`;
+        
+        if (rand < 46) HENcss = `.I:after{content:'ン';}`;
+	      if (rand < 45) HENcss = `.I:after{content:'ヲ';}`;
+        if (rand < 44) HENcss = `.I:after{content:'ワ';}`;
+        if (rand < 43) HENcss = `.I:after{content:'ロ';}`;
+        if (rand < 42) HENcss = `.I:after{content:'レ';}`;
+	      if (rand < 41) HENcss = `.I:after{content:'ル';}`;
+        if (rand < 40) HENcss = `.I:after{content:'リ';}`;
+        if (rand < 39) HENcss = `.I:after{content:'ラ';}`;
+        if (rand < 38) HENcss = `.I:after{content:'ヨ';}`;
+	      if (rand < 37) HENcss = `.I:after{content:'ユ';}`;
+        if (rand < 36) HENcss = `.I:after{content:'ヤ';}`;
+        if (rand < 35) HENcss = `.I:after{content:'モ';}`;
+        if (rand < 34) HENcss = `.I:after{content:'メ';}`;
+	      if (rand < 33) HENcss = `.I:after{content:'ム';}`;
+        if (rand < 32) HENcss = `.I:after{content:'ミ';}`;
+        if (rand < 31) HENcss = `.I:after{content:'マ';}`;
+        if (rand < 30) HENcss = `.I:after{content:'ホ';}`;
+	      if (rand < 29) HENcss = `.I:after{content:'へ';}`;
+        if (rand < 28) HENcss = `.I:after{content:'フ';}`;
+        if (rand < 27) HENcss = `.I:after{content:'ヒ';}`;
+        if (rand < 26) HENcss = `.I:after{content:'ハ';}`;
+	      if (rand < 25) HENcss = `.I:after{content:'ノ';}`;
+        if (rand < 24) HENcss = `.I:after{content:'ネ';}`;
+        if (rand < 23) HENcss = `.I:after{content:'ヌ';}`;
+        if (rand < 22) HENcss = `.I:after{content:'ニ';}`;
+	      if (rand < 21) HENcss = `.I:after{content:'ナ';}`;
+        if (rand < 20) HENcss = `.I:after{content:'ト';}`;
+        if (rand < 19) HENcss = `.I:after{content:'テ';}`;
+        if (rand < 18) HENcss = `.I:after{content:'ツ';}`;
+	      if (rand < 17) HENcss = `.I:after{content:'チ';}`;
+        if (rand < 16) HENcss = `.I:after{content:'タ';}`;
+        if (rand < 15) HENcss = `.I:after{content:'ソ';}`;
+        if (rand < 14) HENcss = `.I:after{content:'セ';}`;
+	      if (rand < 13) HENcss = `.I:after{content:'ス';}`;
+        if (rand < 12) HENcss = `.I:after{content:'シ';}`;
+        if (rand < 11) HENcss = `.I:after{content:'サ';}`;
+        if (rand < 10) HENcss = `.I:after{content:'コ';}`;
+	      if (rand < 9) HENcss = `.I:after{content:'ケ';}`;
+        if (rand < 8) HENcss = `.I:after{content:'ク';}`;
+        if (rand < 7) HENcss = `.I:after{content:'キ';}`;
+        if (rand < 6) HENcss = `.I:after{content:'カ';}`;
+	      if (rand < 5) HENcss = `.I:after{content:'オ';}`;
+        if (rand < 4) HENcss = `.I:after{content:'エ';}`;
+        if (rand < 3) HENcss = `.I:after{content:'ウ';}`;
+        if (rand < 2) HENcss = `.I:after{content:'イ';}`;
+        if (rand < 1) HENcss = `.I:after{content:'ア';}`;
+        //Fin 全カタカナ
+        break;
+
+        case 'ひらがな':
+        rand = Math.floor(Math.random() * 74);
+        // 全ひらがな
+        HENcss = `.I:after{content:'ょ';}`;
+        if (rand < 73) HENcss = `.I:after{content:'ゅ';}`;
+        if (rand < 72) HENcss = `.I:after{content:'ゃ';}`;
+        
+        if (rand < 71) HENcss = `.I:after{content:'ぱ';}`;
+        if (rand < 70) HENcss = `.I:after{content:'ぴ';}`;
+	      if (rand < 69) HENcss = `.I:after{content:'ぷ';}`;
+        if (rand < 68) HENcss = `.I:after{content:'ぺ';}`;
+        if (rand < 67) HENcss = `.I:after{content:'ぽ';}`;
+        
+        if (rand < 66) HENcss = `.I:after{content:'が';}`;
+	      if (rand < 65) HENcss = `.I:after{content:'ぎ';}`;
+        if (rand < 64) HENcss = `.I:after{content:'ぐ';}`;
+	      if (rand < 63) HENcss = `.I:after{content:'げ';}`;
+        if (rand < 62) HENcss = `.I:after{content:'ご';}`;
+        if (rand < 61) HENcss = `.I:after{content:'ざ';}`;
+        if (rand < 60) HENcss = `.I:after{content:'じ';}`;
+	      if (rand < 59) HENcss = `.I:after{content:'ず';}`;
+        if (rand < 58) HENcss = `.I:after{content:'ぜ';}`;
+	      if (rand < 57) HENcss = `.I:after{content:'ぞ';}`;
+        if (rand < 56) HENcss = `.I:after{content:'だ';}`;
+        if (rand < 55) HENcss = `.I:after{content:'ぢ';}`;
+        if (rand < 54) HENcss = `.I:after{content:'づ';}`;
+	      if (rand < 53) HENcss = `.I:after{content:'で';}`;
+        if (rand < 52) HENcss = `.I:after{content:'ど';}`;
+	      if (rand < 51) HENcss = `.I:after{content:'ば';}`;
+        if (rand < 50) HENcss = `.I:after{content:'び';}`;
+        if (rand < 49) HENcss = `.I:after{content:'ぶ';}`;
+        if (rand < 48) HENcss = `.I:after{content:'べ';}`;
+        if (rand < 47) HENcss = `.I:after{content:'ぼ';}`;
+        
+        if (rand < 46) HENcss = `.I:after{content:'ん';}`;
+	      if (rand < 45) HENcss = `.I:after{content:'を';}`;
+        if (rand < 44) HENcss = `.I:after{content:'わ';}`;
+        if (rand < 43) HENcss = `.I:after{content:'ろ';}`;
+        if (rand < 42) HENcss = `.I:after{content:'れ';}`;
+	      if (rand < 41) HENcss = `.I:after{content:'る';}`;
+        if (rand < 40) HENcss = `.I:after{content:'り';}`;
+        if (rand < 39) HENcss = `.I:after{content:'ら';}`;
+        if (rand < 38) HENcss = `.I:after{content:'よ';}`;
+	      if (rand < 37) HENcss = `.I:after{content:'ゆ';}`;
+        if (rand < 36) HENcss = `.I:after{content:'や';}`;
+        if (rand < 35) HENcss = `.I:after{content:'も';}`;
+        if (rand < 34) HENcss = `.I:after{content:'め';}`;
+	      if (rand < 33) HENcss = `.I:after{content:'む';}`;
+        if (rand < 32) HENcss = `.I:after{content:'み';}`;
+        if (rand < 31) HENcss = `.I:after{content:'ま';}`;
+        if (rand < 30) HENcss = `.I:after{content:'ほ';}`;
+	      if (rand < 29) HENcss = `.I:after{content:'へ';}`;
+        if (rand < 28) HENcss = `.I:after{content:'ふ';}`;
+        if (rand < 27) HENcss = `.I:after{content:'ひ';}`;
+        if (rand < 26) HENcss = `.I:after{content:'は';}`;
+	      if (rand < 25) HENcss = `.I:after{content:'の';}`;
+        if (rand < 24) HENcss = `.I:after{content:'ね';}`;
+        if (rand < 23) HENcss = `.I:after{content:'ぬ';}`;
+        if (rand < 22) HENcss = `.I:after{content:'に';}`;
+	      if (rand < 21) HENcss = `.I:after{content:'な';}`;
+        if (rand < 20) HENcss = `.I:after{content:'と';}`;
+        if (rand < 19) HENcss = `.I:after{content:'て';}`;
+        if (rand < 18) HENcss = `.I:after{content:'つ';}`;
+	      if (rand < 17) HENcss = `.I:after{content:'ち';}`;
+        if (rand < 16) HENcss = `.I:after{content:'た';}`;
+        if (rand < 15) HENcss = `.I:after{content:'そ';}`;
+        if (rand < 14) HENcss = `.I:after{content:'せ';}`;
+	      if (rand < 13) HENcss = `.I:after{content:'す';}`;
+        if (rand < 12) HENcss = `.I:after{content:'し';}`;
+        if (rand < 11) HENcss = `.I:after{content:'さ';}`;
+        if (rand < 10) HENcss = `.I:after{content:'こ';}`;
+	      if (rand < 9) HENcss = `.I:after{content:'け';}`;
+        if (rand < 8) HENcss = `.I:after{content:'く';}`;
+        if (rand < 7) HENcss = `.I:after{content:'き';}`;
+        if (rand < 6) HENcss = `.I:after{content:'か';}`;
+	      if (rand < 5) HENcss = `.I:after{content:'お';}`;
+        if (rand < 4) HENcss = `.I:after{content:'え';}`;
+        if (rand < 3) HENcss = `.I:after{content:'う';}`;
+        if (rand < 2) HENcss = `.I:after{content:'い';}`;
+        if (rand < 1) HENcss = `.I:after{content:'あ';}`;
+        // Fin 全ひらがな
+        break;
+        }//FIN swich HENcss
+      
+        /** style要素を作成してCSSを設定 */
+        var HENstyle = $('<style>');
+          HENstyle.text(HENcss);
+          /** style要素を全体に追加 */
+          $('body').append(HENstyle);
+          //----------------------------------------------------------------------------- 2週目
+          
+         
+            
+            
+          
+
+
+          // ------------------------------------差分
+        switch(sabun) {
+          case 'アルファベットひらがなカタカナ数字':
+            rand = Math.floor(Math.random() * 4);
+            HENcss = '数字';
+            if (rand < 3) HENcss = 'アルファベット';
+            if (rand < 2) HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'ひらがなカタカナ数字':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = '数字';
+            if (rand < 2) HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'アルファベットひらがな数字':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = '数字';
+            if (rand < 2) HENcss = 'アルファベット';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'アルファベットカタカナ数字':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = '数字';
+            if (rand < 2) HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'アルファベット';
+          break;
+
+          case 'ひらがな数字':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = '数字';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'カタカナ数字':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = '数字';
+            if (rand < 1) HENcss = 'カタカナ';
+          break;
+        
+          case 'アルファベット数字':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = '数字';
+            if (rand < 1) HENcss = 'アルファベット';
+          break;
+        
+          case '数字':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = '数字';
+          break;
+        
+
+          case 'アルファベットひらがなカタカナ':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = 'アルファベット';
+            if (rand < 2) HENcss = 'ひらがな';
+            if (rand < 1) HENcss = 'カタカナ';
+          break;
+        
+          case 'アルファベットひらがな':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = 'アルファベット';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+
+          case 'アルファベットカタカナ':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = 'アルファベット';
+            if (rand < 1) HENcss = 'カタカナ';
+          break;
+        
+          case 'アルファベット':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = 'アルファベット';
+          break;
+        
+        
+          case 'ひらがなカタカナ':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'カタカナ':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = 'カタカナ';
+          break;
+        
+          case 'ひらがな':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = 'ひらがな';
+          break;
+        }
+        // ------------------------------------Fin 差分
+
+        switch(HENcss){
+          case '数字':
+        rand = Math.floor(Math.random() * 10);
+        // 数字
+        HENcss = `.II:after{content:'9';}`;
+        if (rand < 9) HENcss = `.II:after{content:'8';}`;
+	      if (rand < 8) HENcss = `.II:after{content:'7';}`;
+        if (rand < 7) HENcss = `.II:after{content:'6';}`;
+        if (rand < 6) HENcss = `.II:after{content:'5';}`;
+        if (rand < 5) HENcss = `.II:after{content:'4';}`;
+	      if (rand < 4) HENcss = `.II:after{content:'3';}`;
+        if (rand < 3) HENcss = `.II:after{content:'2';}`;
+        if (rand < 2) HENcss = `.II:after{content:'1';}`;
+        if (rand < 1) HENcss = `.II:after{content:'0';}`;
+        // Fin 数字
+        break;
+
+        case 'アルファベット':
+        rand = Math.floor(Math.random() * 27);
+        // アルファベット
+        HENcss = `.II:after{content:'Z';}`;
+	      if (rand < 26) HENcss = `.II:after{content:'Y';}`;
+        if (rand < 24) HENcss = `.II:after{content:'X';}`;
+        if (rand < 23) HENcss = `.II:after{content:'W';}`;
+        if (rand < 22) HENcss = `.II:after{content:'V';}`;
+	      if (rand < 21) HENcss = `.II:after{content:'U';}`;
+        if (rand < 20) HENcss = `.II:after{content:'T';}`;
+        if (rand < 19) HENcss = `.II:after{content:'S';}`;
+        if (rand < 18) HENcss = `.II:after{content:'R';}`;
+	      if (rand < 17) HENcss = `.II:after{content:'Q';}`;
+        if (rand < 16) HENcss = `.II:after{content:'P';}`;
+        if (rand < 15) HENcss = `.II:after{content:'O';}`;
+        if (rand < 14) HENcss = `.II:after{content:'L';}`;
+	      if (rand < 13) HENcss = `.II:after{content:'N';}`;
+        if (rand < 12) HENcss = `.II:after{content:'M';}`;
+        if (rand < 11) HENcss = `.II:after{content:'K';}`;
+        if (rand < 10) HENcss = `.II:after{content:'J';}`;
+	      if (rand < 9) HENcss = `.II:after{content:'I';}`;
+        if (rand < 8) HENcss = `.II:after{content:'H';}`;
+        if (rand < 7) HENcss = `.II:after{content:'G';}`;
+        if (rand < 6) HENcss = `.II:after{content:'F';}`;
+	      if (rand < 5) HENcss = `.II:after{content:'E';}`;
+        if (rand < 4) HENcss = `.II:after{content:'D';}`;
+        if (rand < 3) HENcss = `.II:after{content:'C';}`;
+        if (rand < 2) HENcss = `.II:after{content:'B';}`;
+        if (rand < 1) HENcss = `.II:after{content:'A';}`;
+        //Fin アルファベット
+        break;
+
+        case 'カタカナ':
+        rand = Math.floor(Math.random() * 74);
+        //全カタカナ
+        HENcss = `.II:after{content:'ョ';}`;
+        if (rand < 73) HENcss = `.II:after{content:'ュ';}`;
+        if (rand < 72) HENcss = `.II:after{content:'ャ';}`;
+        
+        if (rand < 71) HENcss = `.II:after{content:'パ';}`;
+        if (rand < 70) HENcss = `.II:after{content:'ピ';}`;
+	      if (rand < 69) HENcss = `.II:after{content:'プ';}`;
+        if (rand < 68) HENcss = `.II:after{content:'ペ';}`;
+        if (rand < 67) HENcss = `.II:after{content:'ポ';}`;
+        
+        if (rand < 66) HENcss = `.II:after{content:'ガ';}`;
+	      if (rand < 65) HENcss = `.II:after{content:'ギ';}`;
+        if (rand < 64) HENcss = `.II:after{content:'グ';}`;
+	      if (rand < 63) HENcss = `.II:after{content:'ゲ';}`;
+        if (rand < 62) HENcss = `.II:after{content:'ゴ';}`;
+        if (rand < 61) HENcss = `.II:after{content:'ザ';}`;
+        if (rand < 60) HENcss = `.II:after{content:'ジ';}`;
+	      if (rand < 59) HENcss = `.II:after{content:'ズ';}`;
+        if (rand < 58) HENcss = `.II:after{content:'ゼ';}`;
+	      if (rand < 57) HENcss = `.II:after{content:'ゾ';}`;
+        if (rand < 56) HENcss = `.II:after{content:'ダ';}`;
+        if (rand < 55) HENcss = `.II:after{content:'ヂ';}`;
+        if (rand < 54) HENcss = `.II:after{content:'ヅ';}`;
+	      if (rand < 53) HENcss = `.II:after{content:'デ';}`;
+        if (rand < 52) HENcss = `.II:after{content:'ド';}`;
+	      if (rand < 51) HENcss = `.II:after{content:'バ';}`;
+        if (rand < 50) HENcss = `.II:after{content:'ビ';}`;
+        if (rand < 49) HENcss = `.II:after{content:'ブ';}`;
+        if (rand < 48) HENcss = `.II:after{content:'ベ';}`;
+        if (rand < 47) HENcss = `.II:after{content:'ボ';}`;
+        
+        if (rand < 46) HENcss = `.II:after{content:'ン';}`;
+	      if (rand < 45) HENcss = `.II:after{content:'ヲ';}`;
+        if (rand < 44) HENcss = `.II:after{content:'ワ';}`;
+        if (rand < 43) HENcss = `.II:after{content:'ロ';}`;
+        if (rand < 42) HENcss = `.II:after{content:'レ';}`;
+	      if (rand < 41) HENcss = `.II:after{content:'ル';}`;
+        if (rand < 40) HENcss = `.II:after{content:'リ';}`;
+        if (rand < 39) HENcss = `.II:after{content:'ラ';}`;
+        if (rand < 38) HENcss = `.II:after{content:'ヨ';}`;
+	      if (rand < 37) HENcss = `.II:after{content:'ユ';}`;
+        if (rand < 36) HENcss = `.II:after{content:'ヤ';}`;
+        if (rand < 35) HENcss = `.II:after{content:'モ';}`;
+        if (rand < 34) HENcss = `.II:after{content:'メ';}`;
+	      if (rand < 33) HENcss = `.II:after{content:'ム';}`;
+        if (rand < 32) HENcss = `.II:after{content:'ミ';}`;
+        if (rand < 31) HENcss = `.II:after{content:'マ';}`;
+        if (rand < 30) HENcss = `.II:after{content:'ホ';}`;
+	      if (rand < 29) HENcss = `.II:after{content:'へ';}`;
+        if (rand < 28) HENcss = `.II:after{content:'フ';}`;
+        if (rand < 27) HENcss = `.II:after{content:'ヒ';}`;
+        if (rand < 26) HENcss = `.II:after{content:'ハ';}`;
+	      if (rand < 25) HENcss = `.II:after{content:'ノ';}`;
+        if (rand < 24) HENcss = `.II:after{content:'ネ';}`;
+        if (rand < 23) HENcss = `.II:after{content:'ヌ';}`;
+        if (rand < 22) HENcss = `.II:after{content:'ニ';}`;
+	      if (rand < 21) HENcss = `.II:after{content:'ナ';}`;
+        if (rand < 20) HENcss = `.II:after{content:'ト';}`;
+        if (rand < 19) HENcss = `.II:after{content:'テ';}`;
+        if (rand < 18) HENcss = `.II:after{content:'ツ';}`;
+	      if (rand < 17) HENcss = `.II:after{content:'チ';}`;
+        if (rand < 16) HENcss = `.II:after{content:'タ';}`;
+        if (rand < 15) HENcss = `.II:after{content:'ソ';}`;
+        if (rand < 14) HENcss = `.II:after{content:'セ';}`;
+	      if (rand < 13) HENcss = `.II:after{content:'ス';}`;
+        if (rand < 12) HENcss = `.II:after{content:'シ';}`;
+        if (rand < 11) HENcss = `.II:after{content:'サ';}`;
+        if (rand < 10) HENcss = `.II:after{content:'コ';}`;
+	      if (rand < 9) HENcss = `.II:after{content:'ケ';}`;
+        if (rand < 8) HENcss = `.II:after{content:'ク';}`;
+        if (rand < 7) HENcss = `.II:after{content:'キ';}`;
+        if (rand < 6) HENcss = `.II:after{content:'カ';}`;
+	      if (rand < 5) HENcss = `.II:after{content:'オ';}`;
+        if (rand < 4) HENcss = `.II:after{content:'エ';}`;
+        if (rand < 3) HENcss = `.II:after{content:'ウ';}`;
+        if (rand < 2) HENcss = `.II:after{content:'イ';}`;
+        if (rand < 1) HENcss = `.II:after{content:'ア';}`;
+        //Fin 全カタカナ
+        break;
+
+        case 'ひらがな':
+        rand = Math.floor(Math.random() * 74);
+        // 全ひらがな
+        HENcss = `.II:after{content:'ょ';}`;
+        if (rand < 73) HENcss = `.II:after{content:'ゅ';}`;
+        if (rand < 72) HENcss = `.II:after{content:'ゃ';}`;
+        
+        if (rand < 71) HENcss = `.II:after{content:'ぱ';}`;
+        if (rand < 70) HENcss = `.II:after{content:'ぴ';}`;
+	      if (rand < 69) HENcss = `.II:after{content:'ぷ';}`;
+        if (rand < 68) HENcss = `.II:after{content:'ぺ';}`;
+        if (rand < 67) HENcss = `.II:after{content:'ぽ';}`;
+        
+        if (rand < 66) HENcss = `.II:after{content:'が';}`;
+	      if (rand < 65) HENcss = `.II:after{content:'ぎ';}`;
+        if (rand < 64) HENcss = `.II:after{content:'ぐ';}`;
+	      if (rand < 63) HENcss = `.II:after{content:'げ';}`;
+        if (rand < 62) HENcss = `.II:after{content:'ご';}`;
+        if (rand < 61) HENcss = `.II:after{content:'ざ';}`;
+        if (rand < 60) HENcss = `.II:after{content:'じ';}`;
+	      if (rand < 59) HENcss = `.II:after{content:'ず';}`;
+        if (rand < 58) HENcss = `.II:after{content:'ぜ';}`;
+	      if (rand < 57) HENcss = `.II:after{content:'ぞ';}`;
+        if (rand < 56) HENcss = `.II:after{content:'だ';}`;
+        if (rand < 55) HENcss = `.II:after{content:'ぢ';}`;
+        if (rand < 54) HENcss = `.II:after{content:'づ';}`;
+	      if (rand < 53) HENcss = `.II:after{content:'で';}`;
+        if (rand < 52) HENcss = `.II:after{content:'ど';}`;
+	      if (rand < 51) HENcss = `.II:after{content:'ば';}`;
+        if (rand < 50) HENcss = `.II:after{content:'び';}`;
+        if (rand < 49) HENcss = `.II:after{content:'ぶ';}`;
+        if (rand < 48) HENcss = `.II:after{content:'べ';}`;
+        if (rand < 47) HENcss = `.II:after{content:'ぼ';}`;
+        
+        if (rand < 46) HENcss = `.II:after{content:'ん';}`;
+	      if (rand < 45) HENcss = `.II:after{content:'を';}`;
+        if (rand < 44) HENcss = `.II:after{content:'わ';}`;
+        if (rand < 43) HENcss = `.II:after{content:'ろ';}`;
+        if (rand < 42) HENcss = `.II:after{content:'れ';}`;
+	      if (rand < 41) HENcss = `.II:after{content:'る';}`;
+        if (rand < 40) HENcss = `.II:after{content:'り';}`;
+        if (rand < 39) HENcss = `.II:after{content:'ら';}`;
+        if (rand < 38) HENcss = `.II:after{content:'よ';}`;
+	      if (rand < 37) HENcss = `.II:after{content:'ゆ';}`;
+        if (rand < 36) HENcss = `.II:after{content:'や';}`;
+        if (rand < 35) HENcss = `.II:after{content:'も';}`;
+        if (rand < 34) HENcss = `.II:after{content:'め';}`;
+	      if (rand < 33) HENcss = `.II:after{content:'む';}`;
+        if (rand < 32) HENcss = `.II:after{content:'み';}`;
+        if (rand < 31) HENcss = `.II:after{content:'ま';}`;
+        if (rand < 30) HENcss = `.II:after{content:'ほ';}`;
+	      if (rand < 29) HENcss = `.II:after{content:'へ';}`;
+        if (rand < 28) HENcss = `.II:after{content:'ふ';}`;
+        if (rand < 27) HENcss = `.II:after{content:'ひ';}`;
+        if (rand < 26) HENcss = `.II:after{content:'は';}`;
+	      if (rand < 25) HENcss = `.II:after{content:'の';}`;
+        if (rand < 24) HENcss = `.II:after{content:'ね';}`;
+        if (rand < 23) HENcss = `.II:after{content:'ぬ';}`;
+        if (rand < 22) HENcss = `.II:after{content:'に';}`;
+	      if (rand < 21) HENcss = `.II:after{content:'な';}`;
+        if (rand < 20) HENcss = `.II:after{content:'と';}`;
+        if (rand < 19) HENcss = `.II:after{content:'て';}`;
+        if (rand < 18) HENcss = `.II:after{content:'つ';}`;
+	      if (rand < 17) HENcss = `.II:after{content:'ち';}`;
+        if (rand < 16) HENcss = `.II:after{content:'た';}`;
+        if (rand < 15) HENcss = `.II:after{content:'そ';}`;
+        if (rand < 14) HENcss = `.II:after{content:'せ';}`;
+	      if (rand < 13) HENcss = `.II:after{content:'す';}`;
+        if (rand < 12) HENcss = `.II:after{content:'し';}`;
+        if (rand < 11) HENcss = `.II:after{content:'さ';}`;
+        if (rand < 10) HENcss = `.II:after{content:'こ';}`;
+	      if (rand < 9) HENcss = `.II:after{content:'け';}`;
+        if (rand < 8) HENcss = `.II:after{content:'く';}`;
+        if (rand < 7) HENcss = `.II:after{content:'き';}`;
+        if (rand < 6) HENcss = `.II:after{content:'か';}`;
+	      if (rand < 5) HENcss = `.II:after{content:'お';}`;
+        if (rand < 4) HENcss = `.II:after{content:'え';}`;
+        if (rand < 3) HENcss = `.II:after{content:'う';}`;
+        if (rand < 2) HENcss = `.II:after{content:'い';}`;
+        if (rand < 1) HENcss = `.II:after{content:'あ';}`;
+        // Fin 全ひらがな
+        break;
+        }//FIN swich HENcss
+      
+        /** style要素を作成してCSSを設定 */
+        var HENstyle = $('<style>');
+          HENstyle.text(HENcss);
+          /** style要素を全体に追加 */
+          $('body').append(HENstyle);
+
+          // ------------------------------------------------------------------------------------------3週目
+
+           // ------------------------------------差分
+        switch(sabun) {
+          case 'アルファベットひらがなカタカナ数字':
+            rand = Math.floor(Math.random() * 4);
+            HENcss = '数字';
+            if (rand < 3) HENcss = 'アルファベット';
+            if (rand < 2) HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'ひらがなカタカナ数字':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = '数字';
+            if (rand < 2) HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'アルファベットひらがな数字':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = '数字';
+            if (rand < 2) HENcss = 'アルファベット';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'アルファベットカタカナ数字':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = '数字';
+            if (rand < 2) HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'アルファベット';
+          break;
+
+          case 'ひらがな数字':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = '数字';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'カタカナ数字':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = '数字';
+            if (rand < 1) HENcss = 'カタカナ';
+          break;
+        
+          case 'アルファベット数字':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = '数字';
+            if (rand < 1) HENcss = 'アルファベット';
+          break;
+        
+          case '数字':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = '数字';
+          break;
+        
+
+          case 'アルファベットひらがなカタカナ':
+            rand = Math.floor(Math.random() * 3);
+            HENcss = 'アルファベット';
+            if (rand < 2) HENcss = 'ひらがな';
+            if (rand < 1) HENcss = 'カタカナ';
+          break;
+        
+          case 'アルファベットひらがな':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = 'アルファベット';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+
+          case 'アルファベットカタカナ':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = 'アルファベット';
+            if (rand < 1) HENcss = 'カタカナ';
+          break;
+        
+          case 'アルファベット':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = 'アルファベット';
+          break;
+        
+        
+          case 'ひらがなカタカナ':
+            rand = Math.floor(Math.random() * 2);
+            HENcss = 'カタカナ';
+            if (rand < 1) HENcss = 'ひらがな';
+          break;
+        
+          case 'カタカナ':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = 'カタカナ';
+          break;
+        
+          case 'ひらがな':
+            rand = Math.floor(Math.random() * 1);
+            HENcss = 'ひらがな';
+          break;
+        }
+        // ------------------------------------Fin 差分
+
+        switch(HENcss){
+          case '数字':
+        rand = Math.floor(Math.random() * 10);
+        // 数字
+        HENcss = `.III:after{content:'9';}`;
+        if (rand < 9) HENcss = `.III:after{content:'8';}`;
+	      if (rand < 8) HENcss = `.III:after{content:'7';}`;
+        if (rand < 7) HENcss = `.III:after{content:'6';}`;
+        if (rand < 6) HENcss = `.III:after{content:'5';}`;
+        if (rand < 5) HENcss = `.III:after{content:'4';}`;
+	      if (rand < 4) HENcss = `.III:after{content:'3';}`;
+        if (rand < 3) HENcss = `.III:after{content:'2';}`;
+        if (rand < 2) HENcss = `.III:after{content:'1';}`;
+        if (rand < 1) HENcss = `.III:after{content:'0';}`;
+        // Fin 数字
+        break;
+
+        case 'アルファベット':
+        rand = Math.floor(Math.random() * 27);
+        // アルファベット
+        HENcss = `.III:after{content:'Z';}`;
+	      if (rand < 26) HENcss = `.III:after{content:'Y';}`;
+        if (rand < 24) HENcss = `.III:after{content:'X';}`;
+        if (rand < 23) HENcss = `.III:after{content:'W';}`;
+        if (rand < 22) HENcss = `.III:after{content:'V';}`;
+	      if (rand < 21) HENcss = `.III:after{content:'U';}`;
+        if (rand < 20) HENcss = `.III:after{content:'T';}`;
+        if (rand < 19) HENcss = `.III:after{content:'S';}`;
+        if (rand < 18) HENcss = `.III:after{content:'R';}`;
+	      if (rand < 17) HENcss = `.III:after{content:'Q';}`;
+        if (rand < 16) HENcss = `.III:after{content:'P';}`;
+        if (rand < 15) HENcss = `.III:after{content:'O';}`;
+        if (rand < 14) HENcss = `.III:after{content:'L';}`;
+	      if (rand < 13) HENcss = `.III:after{content:'N';}`;
+        if (rand < 12) HENcss = `.III:after{content:'M';}`;
+        if (rand < 11) HENcss = `.III:after{content:'K';}`;
+        if (rand < 10) HENcss = `.III:after{content:'J';}`;
+	      if (rand < 9) HENcss = `.III:after{content:'I';}`;
+        if (rand < 8) HENcss = `.III:after{content:'H';}`;
+        if (rand < 7) HENcss = `.III:after{content:'G';}`;
+        if (rand < 6) HENcss = `.III:after{content:'F';}`;
+	      if (rand < 5) HENcss = `.III:after{content:'E';}`;
+        if (rand < 4) HENcss = `.III:after{content:'D';}`;
+        if (rand < 3) HENcss = `.III:after{content:'C';}`;
+        if (rand < 2) HENcss = `.III:after{content:'B';}`;
+        if (rand < 1) HENcss = `.III:after{content:'A';}`;
+        //Fin アルファベット
+        break;
+
+        case 'カタカナ':
+        rand = Math.floor(Math.random() * 74);
+        //全カタカナ
+        HENcss = `.III:after{content:'ョ';}`;
+        if (rand < 73) HENcss = `.III:after{content:'ュ';}`;
+        if (rand < 72) HENcss = `.III:after{content:'ャ';}`;
+        
+        if (rand < 71) HENcss = `.III:after{content:'パ';}`;
+        if (rand < 70) HENcss = `.III:after{content:'ピ';}`;
+	      if (rand < 69) HENcss = `.III:after{content:'プ';}`;
+        if (rand < 68) HENcss = `.III:after{content:'ペ';}`;
+        if (rand < 67) HENcss = `.III:after{content:'ポ';}`;
+        
+        if (rand < 66) HENcss = `.III:after{content:'ガ';}`;
+	      if (rand < 65) HENcss = `.III:after{content:'ギ';}`;
+        if (rand < 64) HENcss = `.III:after{content:'グ';}`;
+	      if (rand < 63) HENcss = `.III:after{content:'ゲ';}`;
+        if (rand < 62) HENcss = `.III:after{content:'ゴ';}`;
+        if (rand < 61) HENcss = `.III:after{content:'ザ';}`;
+        if (rand < 60) HENcss = `.III:after{content:'ジ';}`;
+	      if (rand < 59) HENcss = `.III:after{content:'ズ';}`;
+        if (rand < 58) HENcss = `.III:after{content:'ゼ';}`;
+	      if (rand < 57) HENcss = `.III:after{content:'ゾ';}`;
+        if (rand < 56) HENcss = `.III:after{content:'ダ';}`;
+        if (rand < 55) HENcss = `.III:after{content:'ヂ';}`;
+        if (rand < 54) HENcss = `.III:after{content:'ヅ';}`;
+	      if (rand < 53) HENcss = `.III:after{content:'デ';}`;
+        if (rand < 52) HENcss = `.III:after{content:'ド';}`;
+	      if (rand < 51) HENcss = `.III:after{content:'バ';}`;
+        if (rand < 50) HENcss = `.III:after{content:'ビ';}`;
+        if (rand < 49) HENcss = `.III:after{content:'ブ';}`;
+        if (rand < 48) HENcss = `.III:after{content:'ベ';}`;
+        if (rand < 47) HENcss = `.III:after{content:'ボ';}`;
+        
+        if (rand < 46) HENcss = `.III:after{content:'ン';}`;
+	      if (rand < 45) HENcss = `.III:after{content:'ヲ';}`;
+        if (rand < 44) HENcss = `.III:after{content:'ワ';}`;
+        if (rand < 43) HENcss = `.III:after{content:'ロ';}`;
+        if (rand < 42) HENcss = `.III:after{content:'レ';}`;
+	      if (rand < 41) HENcss = `.III:after{content:'ル';}`;
+        if (rand < 40) HENcss = `.III:after{content:'リ';}`;
+        if (rand < 39) HENcss = `.III:after{content:'ラ';}`;
+        if (rand < 38) HENcss = `.III:after{content:'ヨ';}`;
+	      if (rand < 37) HENcss = `.III:after{content:'ユ';}`;
+        if (rand < 36) HENcss = `.III:after{content:'ヤ';}`;
+        if (rand < 35) HENcss = `.III:after{content:'モ';}`;
+        if (rand < 34) HENcss = `.III:after{content:'メ';}`;
+	      if (rand < 33) HENcss = `.III:after{content:'ム';}`;
+        if (rand < 32) HENcss = `.III:after{content:'ミ';}`;
+        if (rand < 31) HENcss = `.III:after{content:'マ';}`;
+        if (rand < 30) HENcss = `.III:after{content:'ホ';}`;
+	      if (rand < 29) HENcss = `.III:after{content:'へ';}`;
+        if (rand < 28) HENcss = `.III:after{content:'フ';}`;
+        if (rand < 27) HENcss = `.III:after{content:'ヒ';}`;
+        if (rand < 26) HENcss = `.III:after{content:'ハ';}`;
+	      if (rand < 25) HENcss = `.III:after{content:'ノ';}`;
+        if (rand < 24) HENcss = `.III:after{content:'ネ';}`;
+        if (rand < 23) HENcss = `.III:after{content:'ヌ';}`;
+        if (rand < 22) HENcss = `.III:after{content:'ニ';}`;
+	      if (rand < 21) HENcss = `.III:after{content:'ナ';}`;
+        if (rand < 20) HENcss = `.III:after{content:'ト';}`;
+        if (rand < 19) HENcss = `.III:after{content:'テ';}`;
+        if (rand < 18) HENcss = `.III:after{content:'ツ';}`;
+	      if (rand < 17) HENcss = `.III:after{content:'チ';}`;
+        if (rand < 16) HENcss = `.III:after{content:'タ';}`;
+        if (rand < 15) HENcss = `.III:after{content:'ソ';}`;
+        if (rand < 14) HENcss = `.III:after{content:'セ';}`;
+	      if (rand < 13) HENcss = `.III:after{content:'ス';}`;
+        if (rand < 12) HENcss = `.III:after{content:'シ';}`;
+        if (rand < 11) HENcss = `.III:after{content:'サ';}`;
+        if (rand < 10) HENcss = `.III:after{content:'コ';}`;
+	      if (rand < 9) HENcss = `.III:after{content:'ケ';}`;
+        if (rand < 8) HENcss = `.III:after{content:'ク';}`;
+        if (rand < 7) HENcss = `.III:after{content:'キ';}`;
+        if (rand < 6) HENcss = `.III:after{content:'カ';}`;
+	      if (rand < 5) HENcss = `.III:after{content:'オ';}`;
+        if (rand < 4) HENcss = `.III:after{content:'エ';}`;
+        if (rand < 3) HENcss = `.III:after{content:'ウ';}`;
+        if (rand < 2) HENcss = `.III:after{content:'イ';}`;
+        if (rand < 1) HENcss = `.III:after{content:'ア';}`;
+        //Fin 全カタカナ
+        break;
+
+        case 'ひらがな':
+        rand = Math.floor(Math.random() * 74);
+        // 全ひらがな
+        HENcss = `.III:after{content:'ょ';}`;
+        if (rand < 73) HENcss = `.III:after{content:'ゅ';}`;
+        if (rand < 72) HENcss = `.III:after{content:'ゃ';}`;
+        
+        if (rand < 71) HENcss = `.III:after{content:'ぱ';}`;
+        if (rand < 70) HENcss = `.III:after{content:'ぴ';}`;
+	      if (rand < 69) HENcss = `.III:after{content:'ぷ';}`;
+        if (rand < 68) HENcss = `.III:after{content:'ぺ';}`;
+        if (rand < 67) HENcss = `.III:after{content:'ぽ';}`;
+        
+        if (rand < 66) HENcss = `.III:after{content:'が';}`;
+	      if (rand < 65) HENcss = `.III:after{content:'ぎ';}`;
+        if (rand < 64) HENcss = `.III:after{content:'ぐ';}`;
+	      if (rand < 63) HENcss = `.III:after{content:'げ';}`;
+        if (rand < 62) HENcss = `.III:after{content:'ご';}`;
+        if (rand < 61) HENcss = `.III:after{content:'ざ';}`;
+        if (rand < 60) HENcss = `.III:after{content:'じ';}`;
+	      if (rand < 59) HENcss = `.III:after{content:'ず';}`;
+        if (rand < 58) HENcss = `.III:after{content:'ぜ';}`;
+	      if (rand < 57) HENcss = `.III:after{content:'ぞ';}`;
+        if (rand < 56) HENcss = `.III:after{content:'だ';}`;
+        if (rand < 55) HENcss = `.III:after{content:'ぢ';}`;
+        if (rand < 54) HENcss = `.III:after{content:'づ';}`;
+	      if (rand < 53) HENcss = `.III:after{content:'で';}`;
+        if (rand < 52) HENcss = `.III:after{content:'ど';}`;
+	      if (rand < 51) HENcss = `.III:after{content:'ば';}`;
+        if (rand < 50) HENcss = `.III:after{content:'び';}`;
+        if (rand < 49) HENcss = `.III:after{content:'ぶ';}`;
+        if (rand < 48) HENcss = `.III:after{content:'べ';}`;
+        if (rand < 47) HENcss = `.III:after{content:'ぼ';}`;
+        
+        if (rand < 46) HENcss = `.III:after{content:'ん';}`;
+	      if (rand < 45) HENcss = `.III:after{content:'を';}`;
+        if (rand < 44) HENcss = `.III:after{content:'わ';}`;
+        if (rand < 43) HENcss = `.III:after{content:'ろ';}`;
+        if (rand < 42) HENcss = `.III:after{content:'れ';}`;
+	      if (rand < 41) HENcss = `.III:after{content:'る';}`;
+        if (rand < 40) HENcss = `.III:after{content:'り';}`;
+        if (rand < 39) HENcss = `.III:after{content:'ら';}`;
+        if (rand < 38) HENcss = `.III:after{content:'よ';}`;
+	      if (rand < 37) HENcss = `.III:after{content:'ゆ';}`;
+        if (rand < 36) HENcss = `.III:after{content:'や';}`;
+        if (rand < 35) HENcss = `.III:after{content:'も';}`;
+        if (rand < 34) HENcss = `.III:after{content:'め';}`;
+	      if (rand < 33) HENcss = `.III:after{content:'む';}`;
+        if (rand < 32) HENcss = `.III:after{content:'み';}`;
+        if (rand < 31) HENcss = `.III:after{content:'ま';}`;
+        if (rand < 30) HENcss = `.III:after{content:'ほ';}`;
+	      if (rand < 29) HENcss = `.III:after{content:'へ';}`;
+        if (rand < 28) HENcss = `.III:after{content:'ふ';}`;
+        if (rand < 27) HENcss = `.III:after{content:'ひ';}`;
+        if (rand < 26) HENcss = `.III:after{content:'は';}`;
+	      if (rand < 25) HENcss = `.III:after{content:'の';}`;
+        if (rand < 24) HENcss = `.III:after{content:'ね';}`;
+        if (rand < 23) HENcss = `.III:after{content:'ぬ';}`;
+        if (rand < 22) HENcss = `.III:after{content:'に';}`;
+	      if (rand < 21) HENcss = `.III:after{content:'な';}`;
+        if (rand < 20) HENcss = `.III:after{content:'と';}`;
+        if (rand < 19) HENcss = `.III:after{content:'て';}`;
+        if (rand < 18) HENcss = `.III:after{content:'つ';}`;
+	      if (rand < 17) HENcss = `.III:after{content:'ち';}`;
+        if (rand < 16) HENcss = `.III:after{content:'た';}`;
+        if (rand < 15) HENcss = `.III:after{content:'そ';}`;
+        if (rand < 14) HENcss = `.III:after{content:'せ';}`;
+	      if (rand < 13) HENcss = `.III:after{content:'す';}`;
+        if (rand < 12) HENcss = `.III:after{content:'し';}`;
+        if (rand < 11) HENcss = `.III:after{content:'さ';}`;
+        if (rand < 10) HENcss = `.III:after{content:'こ';}`;
+	      if (rand < 9) HENcss = `.III:after{content:'け';}`;
+        if (rand < 8) HENcss = `.III:after{content:'く';}`;
+        if (rand < 7) HENcss = `.III:after{content:'き';}`;
+        if (rand < 6) HENcss = `.III:after{content:'か';}`;
+	      if (rand < 5) HENcss = `.III:after{content:'お';}`;
+        if (rand < 4) HENcss = `.III:after{content:'え';}`;
+        if (rand < 3) HENcss = `.III:after{content:'う';}`;
+        if (rand < 2) HENcss = `.III:after{content:'い';}`;
+        if (rand < 1) HENcss = `.III:after{content:'あ';}`;
+        // Fin 全ひらがな
+        break;
+        }//FIN swich HENcss
+      
+        /** style要素を作成してCSSを設定 */
+        var HENstyle = $('<style>');
+          HENstyle.text(HENcss);
+          /** style要素を全体に追加 */
+          $('body').append(HENstyle);
+
+    };
+    </script>
+    <!-- Fin Jquary -->
+
+  </head>
+  <body>
+     <div class="wrapper">
+    <!-- header -->
+    <header>
+      <h1 class="top-h1" id="click">ネームメーカー(※リセット押してから開始)</h1>
+    </header>
+    <!-- Fin header -->
+    
+    <!-- content -->
+    <div class="content">
+      <!-- 左上 -->
+      <div class="KANKAKU">
+        <button class="BIG" type="button" onclick="TriB()">開始</button>
+        <input class="BIG" type="button" value="リセット" onclick="func1()"/>
+      </div>
+      <!-- Fin 左上 -->
+      
+      <!-- 上真ん中 -->
+      <p>文字数:3</p>
+      <!-- Fin 上真ん中 -->
+
+      <!-- 左下 -->
+      <div class="content-name">
+          <p class="I">名前：<span class="II"></span><span class="III"></span></p>
+      </div>
+      <!-- Fin 左下 -->
+
+      <!-- 右側 -->
+      <div class="content-option">
+        <input class="big" type="checkbox" name="options" value="アルファベット" checked> アルファベット
+        <input class="big" type="checkbox" name="options" value="ひらがな" checked> ひらがな
+        <input class="big" type="checkbox" name="options" value="カタカナ" checked> カタカナ
+        <input class="big" type="checkbox" name="options" value="数字" checked> 数字
+      </div>
+      <!-- Fin右側 -->
+
+    </div>
+    <!-- Fin content -->
+
+    <!-- footer -->
+    <footer class="last">
+      <div class="hm">
+        <a href="#click">
+          トップページへ
+        </a>
+      </div>
+      <div class="copyright">
+        © Copyright 2021
+      </div>
+    </footer>
+    <!-- Fin footer -->
+
+    </div>
+    <script language="javascript" type="text/javascript">
+    var sabun;
+      const func1 = () => {
+        const elements = document.getElementsByName("options");
+        sabun = '';
+        console.log("--- 名前 ---");
+  
+        for (let k=0; k<elements.length; k++){
+          if (elements[k].checked){
+            console.log(elements[k].value);//出力
+            sabun += elements[k].value;
+          }
+        }
+        console.log(sabun);
+     }
+    </script>
+    
+  </body>
+</html>
